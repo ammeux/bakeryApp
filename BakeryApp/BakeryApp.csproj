@@ -1,0 +1,143 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{CE39E345-0079-4CFC-AD4F-8AD1DEC5015D}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>BakeryApp</RootNamespace>
+    <AssemblyName>BakeryApp</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Food\AfternoonTea.cs" />
+    <Compile Include="Food\AppleSmoothy.cs" />
+    <Compile Include="Food\Bread.cs" />
+    <Compile Include="Food\Breakfast.cs" />
+    <Compile Include="Food\CheeseCake.cs" />
+    <Compile Include="Food\Coke.cs" />
+    <Compile Include="Food\Cookie.cs" />
+    <Compile Include="Food\Dessert.cs" />
+    <Compile Include="Food\Drink.cs" />
+    <Compile Include="Food\FrenchBaguette.cs" />
+    <Compile Include="Food\HamSandwich.cs" />
+    <Compile Include="Food\IFood.cs" />
+    <Compile Include="Food\Lunch.cs" />
+    <Compile Include="Food\Menu.cs" />
+    <Compile Include="Food\Panini.cs" />
+    <Compile Include="Food\Sandwich.cs" />
+    <Compile Include="Food\SoftBread.cs" />
+    <Compile Include="Food\Stock.cs" />
+    <Compile Include="Food\StockLoader.cs" />
+    <Compile Include="GUI\AfternoonTeaView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\AfternoonTeaView.Designer.cs">
+      <DependentUpon>AfternoonTeaView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\BreakfastView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\BreakfastView.Designer.cs">
+      <DependentUpon>BreakfastView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\CashRegisterView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\CashRegisterView.Designer.cs">
+      <DependentUpon>CashRegisterView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\LunchView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\LunchView.Designer.cs">
+      <DependentUpon>LunchView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\NewStockView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\NewStockView.Designer.cs">
+      <DependentUpon>NewStockView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="GUI\AfternoonTeaView.resx">
+      <DependentUpon>AfternoonTeaView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\BreakfastView.resx">
+      <DependentUpon>BreakfastView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\CashRegisterView.resx">
+      <DependentUpon>CashRegisterView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\LunchView.resx">
+      <DependentUpon>LunchView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

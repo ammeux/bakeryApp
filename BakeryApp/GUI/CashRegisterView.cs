@@ -23,6 +23,8 @@ namespace BakeryApp
         private DataGridViewColumn itemColumn;
         private DataGridViewColumn priceColumn;
 
+        private Button launchSyncButton;
+
         private Button frenchBaguetteButton;
         private Button softBreadButton;
         private Button appleSmoothyButton;
@@ -63,6 +65,8 @@ namespace BakeryApp
 
             this.itemColumn = new DataGridViewColumn();
             this.priceColumn = new DataGridViewColumn();
+
+            this.launchSyncButton = new Button();
 
             this.frenchBaguetteButton = new Button();
             this.softBreadButton = new Button();
@@ -105,6 +109,11 @@ namespace BakeryApp
             orderDetails.Columns.Add(itemColumn);
             orderDetails.Columns.Add(priceColumn);
             orderDetails.Click += new System.EventHandler(orderDetails_Click);
+
+            launchSyncButton.Location = new Point(70, 70);
+            launchSyncButton.Size = new Size(120, 24);
+            launchSyncButton.Text = "Launch SyncF";
+            launchSyncButton.Click += new System.EventHandler(launchSync_Click);
 
             frenchBaguetteButton.Location = new Point(24, 100);
             frenchBaguetteButton.Size = new Size(120, 24);
@@ -185,6 +194,8 @@ namespace BakeryApp
 
             this.Controls.Add(totalLabel);
             this.Controls.Add(totalBox);
+
+            this.Controls.Add(launchSyncButton);
 
             this.Controls.Add(frenchBaguetteButton);
             this.Controls.Add(softBreadButton);
@@ -406,6 +417,12 @@ namespace BakeryApp
             newStockView.ShowDialog();
             stock = newStockView.stock;
             loadButtonsText();
+        }
+
+        public void launchSync_Click(object sender, EventArgs e)
+        {
+            SyncExplorationView syncExplorationView = new SyncExplorationView();
+            syncExplorationView.ShowDialog();
         }
     }
 }

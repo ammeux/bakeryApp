@@ -12,6 +12,7 @@ namespace BakeryApp.Food
 {
     class StockLoader
     {
+
         public void save(Stock stock, String fileName)
         {
             var doc = new XmlDocument();

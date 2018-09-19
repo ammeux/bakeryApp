@@ -1,11 +1,9 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 14
-VisualStudioVersion = 14.0.25420.1
+# Visual Studio 15
+VisualStudioVersion = 15.0.28010.2026
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BakeryApp", "BakeryApp\BakeryApp.csproj", "{CE39E345-0079-4CFC-AD4F-8AD1DEC5015D}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "theBigElephant", "..\theBigElephant\theBigElephant\theBigElephant.csproj", "{4ED25EFF-98D8-4433-BD26-64727D97899C}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -17,12 +15,11 @@ Global
 		{CE39E345-0079-4CFC-AD4F-8AD1DEC5015D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{CE39E345-0079-4CFC-AD4F-8AD1DEC5015D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{CE39E345-0079-4CFC-AD4F-8AD1DEC5015D}.Release|Any CPU.Build.0 = Release|Any CPU
-		{4ED25EFF-98D8-4433-BD26-64727D97899C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{4ED25EFF-98D8-4433-BD26-64727D97899C}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{4ED25EFF-98D8-4433-BD26-64727D97899C}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{4ED25EFF-98D8-4433-BD26-64727D97899C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {BE2FED7E-C8DD-4A18-907C-5172F1559752}
 	EndGlobalSection
 EndGlobal

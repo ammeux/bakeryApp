@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Stock xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <frenchBaguetteStock>99</frenchBaguetteStock>
+  <softBreadStock>99</softBreadStock>
+  <appleSmoothyStock>99</appleSmoothyStock>
+  <cokeStock>98</cokeStock>
+  <hamSandwichStock>100</hamSandwichStock>
+  <paniniStock>98</paniniStock>
+  <cookieStock>100</cookieStock>
+  <cheeseCakeStock>100</cheeseCakeStock>
+</Stock>

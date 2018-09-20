@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using BakeryApp.Food;
 using System.Reflection;
+using BakeryApp.ExceptionHandlers;
 
 namespace BakeryApp.GUI
 {
@@ -168,22 +169,41 @@ namespace BakeryApp.GUI
             PropertyInfo[] properties = typeof(Stock).GetProperties();
             int i = 0;
             int prevStock;
-             
-            foreach (Control x in this.Controls)
-            {             
-                if(x is TextBox)
+
+            try
+            {
+                foreach (Control x in this.Controls)
                 {
-                    stockList.Add(int.Parse(x.Text));
+                    if (x is TextBox)
+                    {
+                        if (int.Parse(x.Text) > 10)
+                            throw new maxStockAddException("Please add maximum 10 items");
+                        stockList.Add(int.Parse(x.Text));
+                    }
                 }
             }
-
-            foreach (PropertyInfo property in properties)
+            catch (FormatException exception)
             {
-                prevStock = int.Parse(property.GetValue(stock).ToString());
-                property.SetValue(stock, prevStock + stockList[i]);
-                i++;
+                MessageBox.Show(exception.ToString());
+            }
+            catch (maxStockAddException exception)
+            {
+                MessageBox.Show(exception.Message);
             }
 
+            try
+            {
+                foreach (PropertyInfo property in properties)
+                {
+                    prevStock = int.Parse(property.GetValue(stock).ToString());
+                    property.SetValue(stock, prevStock + stockList[i]);
+                    i++;
+                }
+            }
+            catch (Exception exception)
+            {
+                MessageBox.Show(exception.ToString());
+            }
             this.Close();
         }
     }
